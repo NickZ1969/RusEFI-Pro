@@ -54,7 +54,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->vbattDividerCoeff = 8.23;
 
 	engineConfiguration->triggerInputPins[0] = Gpio::C6;
-	engineConfiguration->triggerInputPins[1] = Gpio::A5;
+	engineConfiguration->camInputs[0] = Gpio::A5;
 
 	engineConfiguration->communityCommsLedPid = Gpio::D15;  // blue LED on discovery
 	
