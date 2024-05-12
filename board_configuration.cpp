@@ -36,9 +36,28 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->ignitionPins[6] = Gpio::D10;
 	engineConfiguration->ignitionPins[7] = Gpio::D8;
 
+	engineConfiguration->fanPin = Gpio::E7;
+	engineConfiguration->fuelPumpPin = Gpio::E8;
+	engineConfiguration->tachOutputPin = Gpio::E10;
+	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::C7;
+
+	engineConfiguration->map.sensor.hwChannel = EFI_ADC_8;
+	engineConfiguration->clt.adcChannel = EFI_ADC_14;
+	engineConfiguration->iat.adcChannel = EFI_ADC_1;
+	engineConfiguration->tps1_1AdcChannel = EFI_ADC_15;
+	engineConfiguration->afr.hwChannel = EFI_ADC_2;
+	engineConfiguration->baroSensor.hwChannel = EFI_ADC_11;
+
+	/* Battery voltage */
+	engineConfiguration->vbattAdcChannel = EFI_ADC_9;
+	/* Vbat divider: 10K + 1K */
+	engineConfiguration->vbattDividerCoeff = 8.23;
+
 	engineConfiguration->triggerInputPins[0] = Gpio::C6;
 	engineConfiguration->triggerInputPins[1] = Gpio::A5;
 
+	engineConfiguration->communityCommsLedPid = Gpio::D15;  // blue LED on discovery
+	
 //	engineConfiguration->map.sensor.hwChannel = EFI_ADC_3;
 
 //	engineConfiguration->clt.adcChannel = EFI_ADC_1;
