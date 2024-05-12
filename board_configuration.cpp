@@ -1,24 +1,43 @@
 #include "pch.h"
 
 Gpio getCommsLedPin() {
-	return Gpio::Unassigned;
+	return Gpio::D15;
 }
 
 Gpio getRunningLedPin() {
-	return Gpio::Unassigned;
+	return Gpio::D12;
 }
 
 Gpio getWarningLedPin() {
-	return Gpio::Unassigned;
+	return Gpio::D13;
 }
+
 
 // board-specific configuration setup
 void setBoardDefaultConfiguration() {
-    // engineConfiguration->injectionPins[0] = Gpio::F13;
-    // engineConfiguration->ignitionPins[0] = Gpio::E15;
+	engineConfiguration->canTxPin = Gpio::D1;
+	engineConfiguration->canRxPin = Gpio::D0;
+	
+     	engineConfiguration->injectionPins[0] = Gpio::E6;
+	engineConfiguration->injectionPins[1] = Gpio::E5;
+	engineConfiguration->injectionPins[2] = Gpio::D9;
+	engineConfiguration->injectionPins[3] = Gpio::E3;
+	engineConfiguration->injectionPins[4] = Gpio::D9;
+	engineConfiguration->injectionPins[5] = Gpio::B14;
+	engineConfiguration->injectionPins[6] = Gpio::C13;
+	engineConfiguration->injectionPins[7] = Gpio::E14;
+	
+    	engineConfiguration->ignitionPins[0] = Gpio::B13;
+	engineConfiguration->ignitionPins[1] = Gpio::E9;
+	engineConfiguration->ignitionPins[2] = Gpio::A8;
+	engineConfiguration->ignitionPins[3] = Gpio::E4;
+	engineConfiguration->ignitionPins[4] = Gpio::D3;
+	engineConfiguration->ignitionPins[5] = Gpio::D11;
+	engineConfiguration->ignitionPins[6] = Gpio::D10;
+	engineConfiguration->ignitionPins[7] = Gpio::D8;
 
-//   engineConfiguration->triggerInputPins[0] = Gpio::B1;
-//	engineConfiguration->triggerInputPins[1] = Gpio::Unassigned;
+	engineConfiguration->triggerInputPins[0] = Gpio::C6;
+	engineConfiguration->triggerInputPins[1] = Gpio::A5;
 
 //	engineConfiguration->map.sensor.hwChannel = EFI_ADC_3;
 
@@ -35,8 +54,8 @@ void setBoardDefaultConfiguration() {
 
 //	engineConfiguration->adcVcc = 3.3f;
 
-//	engineConfiguration->clt.config.bias_resistor = 2490;
-//	engineConfiguration->iat.config.bias_resistor = 2490;
+	engineConfiguration->clt.config.bias_resistor = 2490;
+	engineConfiguration->iat.config.bias_resistor = 2490;
 
 
 	// Battery sense on PA0
