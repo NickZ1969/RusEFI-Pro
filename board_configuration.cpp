@@ -20,7 +20,7 @@ void setBoardDefaultConfiguration() {
 	
      	engineConfiguration->injectionPins[0] = Gpio::E6;
 	engineConfiguration->injectionPins[1] = Gpio::E5;
-	engineConfiguration->injectionPins[2] = Gpio::D9;
+	engineConfiguration->injectionPins[2] = Gpio::B9;
 	engineConfiguration->injectionPins[3] = Gpio::E3;
 	engineConfiguration->injectionPins[4] = Gpio::D9;
 	engineConfiguration->injectionPins[5] = Gpio::B14;
