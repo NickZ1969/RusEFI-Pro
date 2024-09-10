@@ -56,7 +56,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->triggerInputPins[0] = Gpio::C6;
 	engineConfiguration->camInputs[0] = Gpio::A5;
 
-	engineConfiguration->communityCommsLedPid = Gpio::D15;  // blue LED on discovery
+//	engineConfiguration->communityCommsLedPid = Gpio::D15;  // blue LED on discovery
 	
 //	engineConfiguration->map.sensor.hwChannel = EFI_ADC_3;
 
